@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WireGuard Documentation</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #1e1e1e;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        header {
+            background-color: #2d2d2d;
+            color: #ff6600;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        section {
+            padding: 40px;
+            background-color: #2d2d2d;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff6600;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+
+        code {
+            background-color: #444;
+            padding: 5px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #ffcc00;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tip {
+            background-color: #00cc66;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            background-color: #ff3333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #2d2d2d;
+            color: #777;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WireGuard Documentation</h1>
+    </header>
+
+    <nav>
+        <a href="#installation">Installation</a>
+        <a href="#configuration">Configuration</a>
+        <a href="#usage">Usage</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+    </nav>
+
+    <section id="installation">
+        <h2>Installation</h2>
+        <p>WireGuard is easy to install on various platforms. Below are instructions for popular operating systems:</p>
+
+        <div class="highlight">
+            <h3>Linux</h3>
+            <code>
+                $ sudo apt-get update <br>
+                $ sudo apt-get install wireguard
+            </code>
+        </div>
+
+        <div class="highlight">
+            <h3>Windows</h3>
+            <p>Install WireGuard on Windows by following these steps:</p>
+            <ol>
+                <li>Download the installer from the official website.</li>
+                <li>Run the installer and follow the on-screen instructions.</li>
+                <li>...</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <h3>Tip</h3>
+            <p>For advanced users, consider using package managers or Docker for installation.</p>
+        </div>
+    </section>
+
+    <section id="configuration">
+        <h2>Configuration</h2>
+        <p>Configure WireGuard by editing the configuration file. Below is a basic example:</p>
+
+        <div class="highlight">
+            <h3>Sample Configuration</h3>
+            <code>
+                [Interface]<br>
+                PrivateKey = your_private_key<br>
+                Address = 10.0.0.1/24<br>
+                <br>
+                [Peer]<br>
+                PublicKey = peer_public_key<br>
+                Endpoint = peer_endpoint_address:port<br>
+                AllowedIPs = 10.0.0.2/32
+            </code>
+        </div>
+
+        <div class="warning">
+            <h3>Important Note</h3>
+            <p>Always keep your private keys secure. Do not share them publicly or expose them unintentionally.</p>
+        </div>
+    </section>
+
+    <section id="usage">
+        <h2>Usage</h2>
+        <p>Start WireGuard and connect to peers using the following command:</p>
+
+        <div class="highlight">
+            <code>
+                $ sudo wg-quick up your_configuration_file
+            </code>
+        </div>
+
+        <div class="tip">
+            <h3>Tip</h3>
+            <p>Explore additional options and commands to customize your WireGuard setup.</p>
+        </div>
+    </section>
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <p>If you encounter issues, consider the following troubleshooting steps:</p>
+
+        <ul>
+            <li>Ensure the configuration file is correct.</li>
+            <li>Check for typos in IP addresses and ports.</li>
+            <li>Verify firewall settings.</li>
+            <li>...</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 WireGuard Documentation</p>
+    </footer>
+</body>
+</html>
